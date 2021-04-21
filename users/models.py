@@ -22,9 +22,9 @@ class User(AbstractUser):
     LANGUAGE_CHOICES = ((LANGUAGE_EN, "English"), (LANGUAGE_KR, "Korea"))
 
     CURRENCY_USD = "usd"
-    CURRENCY_USD = "krw"
+    CURRENCY_KRW = "krw"
 
-    CURRENCY_CHOICES = ((CURRENCY_USD, "English"), (CURRENCY_USD, "Korea"))
+    CURRENCY_CHOICES = ((CURRENCY_USD, "English"), (CURRENCY_KRW, "Korea"))
 
     avatar = models.ImageField(blank=True)
     gender = models.CharField(choices=GENDER_CHOICES, max_length=10, blank=True)

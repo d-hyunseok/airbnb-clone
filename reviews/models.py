@@ -1,12 +1,10 @@
 from django.db import models
-
 from core import models as core_models
 
 
 class Reviews(core_models.TimeStampedModel):
 
     """reviews model definition"""
-
     review = models.TextField()
     accuracy = models.IntegerField()
     communication = models.IntegerField()
