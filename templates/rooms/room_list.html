@@ -1,0 +1,5 @@
+{% for room in object_list %}
+<h5>{{room.name}} / ${{room.price}}</h5>
+{% endfor %}
+
+Page {{page_obj.number}} of {{page_obj.paginator.num_pages}}
