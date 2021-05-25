@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+
+from notice.views import NoticeView
 urlpatterns = [
-    path("", include("core.urls", namespace="core")),
+    path("notice/<int:pk>", NoticeView.as_view()),
     path('admin/', admin.site.urls),
 ]
 

@@ -1,6 +1,6 @@
 from django.urls import path
-from rooms import views as room_views
+from . import views
 
-app_name = "core"
+app_name = "rooms"
 
-urlpatterns = [path("", room_views.HomeView.as_view(), name="home")]
+urlpatterns = [path("<int:pk>", views.RoomDetail.as_view(), name="detail")]
